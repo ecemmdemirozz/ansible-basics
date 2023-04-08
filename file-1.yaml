@@ -1,0 +1,15 @@
+---
+  - name: Added lines
+    hosts: localhost
+    tasks:
+      - name: Added lines in file1
+        blockinfile:
+          path: /etc/ssh/sshd_config
+          block: |
+            This is line 1
+            This is line 2
+     
+            
+              
+          
+
