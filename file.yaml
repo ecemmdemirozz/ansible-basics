@@ -1,0 +1,8 @@
+---
+  - name: Playbook- file.yaml
+    hosts: localhost
+    tasks:
+      - name: Add file1
+        file:
+          path: /tmp/file1
+          state: touch
