@@ -1,0 +1,16 @@
+---
+  - name: SELinux Homework
+    hosts: localhost
+    tasks:
+      - name: disabled SELinux
+        lineinfile:
+          path: /etc/selinux/config
+          regexp: '^SELINUX='
+          line: 'SELINUX=disabled'
+      - name: Reboot selinux
+        command: reboot
+
+
+      
+          
+          
