@@ -1,0 +1,8 @@
+---
+  - name: Gather Server Facts
+    hosts: 10.116.0.3
+    gather_facts: yes
+    tasks: 
+      - name: Print message
+        debug: 
+          var: ansible_distribution

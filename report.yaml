@@ -1,0 +1,24 @@
+---
+  - name: host1 playbook
+    hosts: dev
+    tasks:
+      - name: Check hostname
+        command: hostnamectl 
+        register: myoutput
+    
+      - name: Check Disk Usage
+        command: df -h
+        register: myoutput2
+
+      - name: Check Memory
+        command: free -m
+        register: myoutput3
+
+      - name: Print message
+        debug:
+          msg: 
+          - "{{ myoutput }}"
+          - "{{ myoutput2 }}"
+          - "{{ myoutput3 }}"
+      
+    
